@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+html, body {
+padding:0;
+margin:0;
+overflow:hidden;
+display:block;
+}
+#labelTop {
+clear:both;
+padding-top:15px;
+}
+#labelBottom {
+clear:both;
+}
+.uberLabelTop, .uberLabelBottom {
+height:15px;
+line-height:15px;
+float:left;
+text-align:center;
+white-space:nowrap;
+overflow:hidden;
+opacity:0.95;
+cursor:pointer;
+}
+#circles {
+clear:both;
+margin-top:20px;
+}
+.uberCirclePlacer {
+height:40px;
+float:left;
+overflow:hidden;
+text-align:center;
+}
+.uberCircle {
+height:30px;
+width:30px;
+border-radius:15px;
+margin:auto;
+-webkit-box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.3);
+-moz-box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.3);
+box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.3);
+z-index:200;
+position:relative;
+cursor:pointer;
+}
+.uberLine {
+height:10px;
+-webkit-box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.3);
+-moz-box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.3);
+box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.3);
+z-index:100;
+position:relative;
+top:-20px;
+}
+#puck {
+clear:both;
+z-index:300;
+position:relative;
+top:-48px;
+}
+#puckPlacer {
+height:50px;
+float:left;
+overflow:hidden;
+text-align:center;
+}
+#puckBgnd {
+height:40px;
+width:40px;
+border-radius:20px;
+margin:2px auto;
+-webkit-box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
+-moz-box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
+box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
+cursor:pointer;
+}
+#puckIcon {
+height:34px;
+width:34px;
+border-radius:17px;
+margin:2px;
+opacity:0.95;
+}
