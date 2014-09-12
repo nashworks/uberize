@@ -40,7 +40,8 @@ options = $.extend(true,{},defaults,options);
 return this.each(function() {
 var elem = this, $elem = $(elem);
 var maxNumber = options.lT.length;
-var labelWidth = (100/(options.lT.length<1)?1:options.lT.length)+'%';
+maxNumber = (maxNumber<1)?1:maxNumber;
+var labelWidth = (100/maxNumber)+'%';
 $('<div>',{id:'labelTop'}).appendTo(this);
 $('<div>',{id:'labelBottom'}).appendTo(this);
 $('<div>',{id:'circles'}).appendTo(this);
