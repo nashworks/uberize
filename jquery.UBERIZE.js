@@ -12,7 +12,7 @@
  * mBC 	= main background color is made of 3 rgb values (top and bottom colors and opacity)
  * pBC 	= puck background color is made of 3 rgb values (top and bottom colors and opacity)
  * pBBC = puck border color
- * pI 	= puck icons is made of 3 values (background and border colors and path to the icon sprite)
+ * pI 	= puck icons are made of 3 values (background and border colors and path to the icon sprite)
  * pIBC = puck icon border color
  * lBC 	= line background color is made of 3 rgb values (top and bottom colors and opacity)
  * cBC 	= circle background color is made of 3 rgb values (top and bottom colors and opacity)
