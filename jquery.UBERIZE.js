@@ -2,7 +2,7 @@
  * UBERIZE v1.0.0
  * https://github.com/nashworks/uberize
  *
- * Copyright 2014 Nash Brooklyn
+ * Copyright 2014 Nashworks
  * Released under the MIT license
  *
  * LEGEND:
