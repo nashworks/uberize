@@ -1,4 +1,4 @@
 uberize
 =======
 
-Uberize jQuery Plugin (uber app menu)
+Uberize jQuery Plugin (uber app form)

@@ -82,3 +82,33 @@ border-radius:17px;
 margin:2px;
 opacity:0.95;
 }
+.uberField {
+height:30px;
+width:75%;
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+margin:auto;
+border:none;
+-webkit-box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
+-moz-box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
+box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
+padding-left:15px;
+padding-right:15px;
+font-size:150%;
+font-family:'PT Sans Narrow',sans-serif;
+}
+.uberButton {
+height:50px;
+margin-top:15px;
+margin-left:12%;
+padding:5px 15px;
+border:none;
+-webkit-box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
+-moz-box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
+box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
+font-size:150%;
+font-family:'PT Sans Narrow',sans-serif;
+}
