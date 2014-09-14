@@ -8,6 +8,7 @@
  * LEGEND:
  * lT 	= label text (example/default is 4 labels)
  * iFT 	= input field type (example/default is 4 fields)
+ * iFR 	= input field required (example/default is 4 fields)
  * iBT 	= input button type (example/default is 4 fields)
  * lTC 	= label text color
  * piXY = puck icons XY coordinates (example/default is 4 icons)
@@ -31,6 +32,7 @@
 var defaults = {
 lT:['EMAIL','MOBILE','PASSWORD','PHOTO'],
 iFT:['email','tel','password','file'],
+iFR:['required','required','required','required'],
 iBT:['button','button','button','submit'],
 lTC:'#CCC',
 piXY:['0 0','0 -34px','0 -68px','0 -102px'],
@@ -66,8 +68,8 @@ $('<div>',{id:'labelBottom'+(i+1),class:'uberLabelBottom',html:options.lT[i]}).a
 $('<div>',{id:'circlePlacer'+(i+1),class:'uberCirclePlacer'}).append($('<div>',{id:'circle'+(i+1),class:'uberCircle'}),$('<div>',{id:'line'+(i+1),class:'uberLine'})).appendTo('#circles');
 $('<div>',{id:'stepField'+(i+1)}).appendTo('#uberForm');
 $('#stepField'+(i+1)).css({display:(((i+1)==1)?'block':'none'),minHeight:'100px',position:'relative'});
-if (options.iFT[i]=='file') $('<input>',{name:options.lT[i].toLowerCase(),type:options.iFT[i],accept:'image/*;capture=camera',class:'uberField',style:'background-color:'+options.iFBC+';color:'+options.iFTC+';'}).appendTo('#stepField'+(i+1));
-else $('<input>',{name:options.lT[i].toLowerCase(),type:options.iFT[i],placeholder:options.lT[i],class:'uberField',style:'background-color:'+options.iFBC+';color:'+options.iFTC+';'}).appendTo('#stepField'+(i+1));
+if (options.iFT[i]=='file') $('<input name="'+options.lT[i].toLowerCase()+'" type="'+options.iFT[i]+'" accept="image/*;capture=camera" class="uberField" style="background-color:'+options.iFBC+';color:'+options.iFTC+';" '+options.iFR[i]+'>').appendTo('#stepField'+(i+1));
+else $('<input name="'+options.lT[i].toLowerCase()+'" type="'+options.iFT[i]+'" placeholder="'+options.lT[i]+'" class="uberField" style="background-color:'+options.iFBC+';color:'+options.iFTC+';" '+options.iFR[i]+'>').appendTo('#stepField'+(i+1));
 $('<div>',{id:'stepButton'+(i+1)}).appendTo('#uberForm');
 $('#stepButton'+(i+1)).css({display:(((i+1)==1)?'block':'none'),minHeight:'100px',position:'relative'});
 $('<button>',{id:'stepok'+(i+1),type:options.iBT[i],text:(((i+1)==maxNumber)?'SUBMIT':'NEXT'),class:'uberButton',style:'background-color:'+options.iBBC+';color:'+options.iBTC+';'}).appendTo('#stepButton'+(i+1));
