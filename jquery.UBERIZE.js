@@ -24,6 +24,7 @@
  * iBBC = input button background color
  * iFTC = input field text color
  * iBTC = input button text color
+ * dBQO	= database query operation (INSERT or UPDATE), please use second parameter to specify which rowID needs to be updated
  *
  * USAGE:
  * $('some_div').uberize({name1:'value1',name2:'value2',etc...});
@@ -47,7 +48,8 @@ mW:'100%',
 iFBC:'#000',
 iBBC:'#000',
 iFTC:'#CCC',
-iBTC:'#CCC'
+iBTC:'#CCC',
+dBQO:['INSERT','0']
 };
 $.fn.uberize = function(options) {
 options = $.extend(true,{},defaults,options);
@@ -113,6 +115,11 @@ event.preventDefault();
 });
 })(i+1);
 }
+$('#uberForm').on('submit',function(event) {
+var curData = $(this).serialize();
+$.post('form.php',{formname:'uberForm',dbqo:options.dBQO[0],curData:curData,id_to_update:options.dBQO[1]},function(data){alert(data);});
+event.preventDefault();
+});
 $elem.css({clear:'both',width:options.mW,height:'100px',textAlign:'center',fontFamily:'\'PT Sans Narrow\',sans-serif',fontSize:'100%',boxShadow:'0px 1px 4px 0px rgba(0,0,0,0.5)',background:'linear-gradient(to bottom,rgba('+options.mBC[0]+','+options.mBC[2]+') 0%,rgba('+options.mBC[1]+','+options.mBC[2]+') 100%)',color:options.lTC});
 $('#puckBgnd').css({background:'linear-gradient(to bottom,rgba('+options.pBC[0]+','+options.pBC[2]+') 0%,rgba('+options.pBC[1]+','+options.pBC[2]+') 100%)',border:options.pBBC+' 1px solid'});
 $('#puckIcon').css({background:options.pI[0]+' url('+options.pI[1]+') 0 0',border:options.pIBC+' 1px solid'});
