@@ -28,6 +28,9 @@
  *
  * USAGE:
  * $('some_div').uberize({name1:'value1',name2:'value2',etc...});
+ *
+ * EXAMPLE:
+ * $('#uberDiv').uberize({lT:['EMAIL','MOBILE','PASSWORD','PHOTO'],iFT:['email','tel','password','file'],iFR:['required','required','required',''],iBT:['button','button','button','submit'],lTC:'#CCC',iXY:['0 0','0 -34px','0 -68px','0 -102px'],mBC:['26,26,26','1,1,1','1'],pBC:['26,26,26','1,1,1','1'],pBBC:'#333',pI:['#000','icons_white.png'],pIBC:'#333',lBC:['26,26,26','26,26,26','1'],cBC:['26,26,26','26,26,26','1'],mW:'100%',iFBC:'#000',iBBC:'#000',iFTC:'#CCC',iBTC:'#CCC',dBQO:['INSERT','0']});
  */
 ;(function($) {
 var defaults = {
