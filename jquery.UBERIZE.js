@@ -2,7 +2,7 @@
  * UBERIZE v1.0.0
  * https://github.com/nashworks/uberize
  *
- * Copyright 2014 Nashworks
+ * Copyright 2015 Nashworks
  * Released under the MIT license
  *
  * LEGEND:
@@ -84,8 +84,10 @@ if ((i+1)==maxNumber) $('#line'+(i+1)).css({width:'50%',float:'left'});
 $('#labelTop'+(i+1)).css({visibility:(((i+1)==1)?'visible':'hidden')});
 $('#labelBottom'+(i+1)).css({visibility:(((i+1)==1)?'hidden':'visible')});
 (function(j) {
+var base_left_positionA = 0;
 $('#labelBottom'+j+',#circle'+j).click(function(event) {
-$('#puck').stop().animate({'left':$('#circle'+j).position().left+'px'},'slow','swing',function(){$('#puckIcon').css({backgroundPosition:options.piXY[j-1]});});
+base_left_positionA = $('#circle1').position().left;
+$('#puck').stop().animate({'left':$('#circle'+j).position().left-base_left_positionA+'px'},'slow','swing',function(){$('#puckIcon').css({backgroundPosition:options.piXY[j-1]});});
 $('#labelTop'+j).css({visibility:'visible'});
 $('#labelBottom'+j).css({visibility:'hidden'});
 $('#stepField'+j).css({display:'block'});
@@ -101,8 +103,10 @@ event.preventDefault();
 });
 })(i+1);
 (function(j) {
+var base_left_positionB = 0;
 $('#stepok'+j).click(function(event) {
-$('#puck').stop().animate({'left':$('#circle'+(j+1)).position().left+'px'},'slow','swing',function(){$('#puckIcon').css({backgroundPosition:options.piXY[j]});});
+base_left_positionB = $('#circle1').position().left;
+$('#puck').stop().animate({'left':$('#circle'+(j+1)).position().left-base_left_positionB+'px'},'slow','swing',function(){$('#puckIcon').css({backgroundPosition:options.piXY[j]});});
 $('#labelTop'+(j+1)).css({visibility:'visible'});
 $('#labelBottom'+(j+1)).css({visibility:'hidden'});
 $('#stepField'+(j+1)).css({display:'block'});
@@ -123,7 +127,7 @@ var curData = $(this).serialize();
 $.post('form.php',{formname:'uberForm',dbqo:options.dBQO[0],curData:curData,id_to_update:options.dBQO[1]},function(data){alert(data);});
 event.preventDefault();
 });
-$elem.css({clear:'both',width:options.mW,height:'100px',textAlign:'center',fontFamily:'\'PT Sans Narrow\',sans-serif',fontSize:'100%',boxShadow:'0px 1px 4px 0px rgba(0,0,0,0.5)',background:'linear-gradient(to bottom,rgba('+options.mBC[0]+','+options.mBC[2]+') 0%,rgba('+options.mBC[1]+','+options.mBC[2]+') 100%)',color:options.lTC});
+$elem.css({clear:'both',width:options.mW,height:'100px',textAlign:'center',fontFamily:'\'PT Sans Narrow\',sans-serif',fontSize:'100%',boxShadow:'0 1px 4px 0 rgba(0,0,0,0.5)',background:'linear-gradient(to bottom,rgba('+options.mBC[0]+','+options.mBC[2]+') 0%,rgba('+options.mBC[1]+','+options.mBC[2]+') 100%)',color:options.lTC});
 $('#puckBgnd').css({background:'linear-gradient(to bottom,rgba('+options.pBC[0]+','+options.pBC[2]+') 0%,rgba('+options.pBC[1]+','+options.pBC[2]+') 100%)',border:options.pBBC+' 1px solid'});
 $('#puckIcon').css({background:options.pI[0]+' url('+options.pI[1]+') 0 0',border:options.pIBC+' 1px solid'});
 $('.uberLine').css({background:'linear-gradient(to bottom,rgba('+options.lBC[0]+','+options.lBC[2]+') 0%,rgba('+options.lBC[1]+','+options.lBC[2]+') 100%)'});

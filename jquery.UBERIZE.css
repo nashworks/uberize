@@ -35,7 +35,7 @@ text-align:center;
 .uberCircle {
 height:30px;
 width:30px;
-border-radius:15px;
+border-radius:50%;
 margin:auto;
 -webkit-box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.3);
 -moz-box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.3);
@@ -68,7 +68,7 @@ text-align:center;
 #puckBgnd {
 height:40px;
 width:40px;
-border-radius:20px;
+border-radius:50%;
 margin:2px auto;
 -webkit-box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
 -moz-box-shadow:0px 2px 6px 0px rgba(0,0,0,0.6);
@@ -78,7 +78,7 @@ cursor:pointer;
 #puckIcon {
 height:34px;
 width:34px;
-border-radius:17px;
+border-radius:50%;
 margin:2px;
 opacity:0.95;
 }
